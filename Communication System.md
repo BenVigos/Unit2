@@ -645,36 +645,23 @@ Letter to Decimal Number Key
 | **D**| 3 | **I** | 8 | **N** | 13 | **S** | 18 | **X** | 23 |   |    |
 | **E** | 4 | **J** | 9 | **O** | 14 | **T** | 19 | **Y** | 24 |   |    |
 
+This is a video
 
 ## Criteria E: Evaluation 
-
-https://drive.google.com/file/d/1MAuCFV6D2F3c2CchdwKKKxklWseqqgfF/view?usp=sharing 
-
-Above is a video with our testing. 
 
 ### Alpha Testing 
 
 | Test No. | Procedure | Inputs | Expected Output | Success Criteria                                                                |Criteria Met| 
 |----------|-----------|--------|-----------------|---------------------------------------------------------------------------------|------------|
-| 1        |      Use left and right buttons to select best, and then double press the right button to send message.     |    "Best"    |    "Best" printed on message, and get the numbers 1,5,18,19 blink on the LED light.             | Must allow the user to enter English and output in binary                       |Yess |
-| 2        |           |        |                 | Must allow the user to enter either morse code and output to English            |.  |
+| 1        |      Use left and right buttons to select best, and then double press the right button to send message.     |    "Best"    |    "Best" printed on message, and get the numbers 1,5,18,19 blink on the LED light.             | Must allow the user to enter English and output in binary                       |Yes |
+| 2        | Use left button to enter input. Short press for dot and long press for dash. Press the right button to translate the letter (right button pressed after every grouping) | ... --- ... | "SOS" on screen" | Must allow the user to enter either morse code and output to English            | Yes |
 | 3        |       Use left button to select E, double press left button to delete letter. Then, wait for the second screen and press "S" for SOS.    |    "E" and "S"    |           Messsage "E" printed, then deleted letter/empty message. Next, "SOS" message, and numbers 18,14,18 blink on the LED light.      | Must be able to carry out the commands delete, error, acknowledge, send and SOS | Yes |
-| 4        |   Same as Test 1        |    Same as Test 1  |       Taking 6 seconds to write the word "Best"          | Must be able to send at least 10 words per minute                               | No |
+| 4        |   Same as Test 1        |    Same as Test 1  |       Taking 6 seconds to write the word "Best"          | Must be able to send at least 10 words per minute     | No |
+
+
 
 ### Limitations and Further Improvements 
 
 **Limitations** 
 
-One of our device's biggest limitations is its wordcount speed, not only did we fail our success criteria 4, but we failed it by a large margin. To write one word, it took us over a minute. This was due to both the initial design of waiting for the desired-letter to blink, and also because we did not implement any way to change screen without just waiting. These elements combined made the device extra slow since inputting was based more on waiting, and the user has little control.
-
-In addition, there are still some bugs in the code, with the arduino having difficulties in picking up the difference between a single-press and a double-press. I believe this is because of the time interval we assigned it; we made the arduino distinguish from single-press and double-press if the button presses have a difference of x. Tinkercad's simulator has a large difference in timing with the Arduino, with the Arduino's speed much faster than our computer's. While we attempted to change our time intervals according to the Arduino by testing it out with the physical hardware, it was still difficult to have full control. We worked a bulk of our project during winter break, which meant that only one of us had the arduino and coordination was challenging. This added complications when we both could not test our code on the physical hardware together. 
-
-To summarise, some of the limitations with our device includue: 
-1. Wordcount speed was too slow due to lack of usser-control and the basic design
-1. Arduino sometimes can not distinguish difference between single-press and double-press
-
 **Further Improvements** 
-
-In order to make the wordcount per minute faster, my partner and I would have to make some fundamental changes to the design, making it so that letter-selecting isn't just based on waiting. Another feature we could add to improve this could be coding a button-combination which immediately changes the screen. While this would not improve its speed to meet our success crtieria, it could significantly improve the current state. 
-
-Another thing that could improve the device would be having more time to develop and debug the code. As mentioned, collaboration was difficult due to the circumstances given, and also we did not plan thoroughly with the development of the project; we worked on the majority of the project in the beginning, but our momentum slowed down and had to finissh the last features inidivudually. Working seperately hindered the speed of development, and made it difficult to test our code, as well as we had seperate code which we later had to combine. 
